@@ -8,7 +8,7 @@ interface Props {
 }
 
 export function TodoList({ preloadedTodos }: Props) {
-  const todos = usePreloadedQuery(preloadedTodos) || [];
+  const todos = usePreloadedQuery(preloadedTodos);
 
   return (
     <>

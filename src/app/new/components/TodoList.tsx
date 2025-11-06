@@ -9,7 +9,7 @@ interface Props {
 
 export function TodoList({ preloadedTodos }: Props) {
   const { isLoading } = useConvexAuth();
-  const todos = usePreloadedQuery(preloadedTodos, { skip: isLoading });
+  const todos = usePreloadedQuery(!isLoading ? preloadedTodos : "skip");
 
   return (
     <>
